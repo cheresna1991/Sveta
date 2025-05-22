@@ -10,12 +10,24 @@ document.addEventListener("DOMContentLoaded", function() {
 
     toggleButton.addEventListener("click", function() {
         const currentTheme = document.documentElement.getAttribute("data-theme");
-        const newTheme = currentTheme === "light" ? "dark" : "light";
+        let newTheme;
+
+        if (currentTheme === "light") {
+            newTheme = "dark";
+        } else if (currentTheme === "dark") {
+            newTheme = "yellow"; // Переключение на желтую тему
+        } else if (currentTheme === "yellow") {
+            newTheme = "horny"; // Переключение на розовую тему
+        }
+        else {
+            newTheme = "light"; // Возврат к светлой теме
+        }
+
         document.documentElement.setAttribute("data-theme", newTheme);
-        localStorage.setItem("theme", newTheme);
+        localStorage.setItem("theme", newTheme);//внесение темы в память браузера
     });
 
-    resetButton.addEventListener("click", function() {
+    resetButton.addEventListener("click", function() {//кнопка сброса темы
         localStorage.removeItem("theme");
         document.documentElement.setAttribute("data-theme", "light");
     });
