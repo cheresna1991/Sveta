@@ -8,9 +8,12 @@ body {
 }
 
 .head {
-    background-color: rgb(104, 190, 190);
+    background-color: #3d4392;
     padding: 10px;
     text-align: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-left: 0%;
 }
 
 .main {
@@ -90,25 +93,45 @@ body {
 }
 
 .foot {
-    background-color: #f0f0f0;
+    background-color: #3d4392;
             padding: 15px 20px;
             display: grid;
             grid-template-columns: 1fr;
             gap: 10px;
-            border-top: 1px solid #ddd;
+            
             text-align: center;
+}
+.text{
+    color: #fff;
 }
 .sfoot{
     display: grid;
     grid-template-columns: 1fr 1fr;
-    margin-left: 20%;
+    margin-left: 0%;
 }
 
 #reset-theme,
 #toggle-theme {
-    width: 40%;
+    width: 100%;
+    height: 60px; /* Добавляем высоту */
     cursor: pointer;
     transition: transform 0.2s;
+    border: none;
+    border-radius: 5px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.logo{
+     width: 100%;
+    height: 80px; /* Добавляем высоту */
+    cursor: pointer;
+    transition: transform 0.2s;
+    border: none;
+    border-radius: 5px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 
@@ -126,7 +149,9 @@ body {
 [data-theme="dark"] .book {
     background: #333;
 }
-
+[data-theme="dark"] .foot {
+    background: #353535;
+}
 [data-theme="dark"] .book-info {
     background: rgba(50, 50, 50, 0.9);
 }
@@ -136,7 +161,7 @@ body {
     color: #fff;
 }
 [data-theme="dark"] .head {
-    background: #071349;
+    background: #3a3a3a;
 }
 [data-theme="dark"] .logo {
     color: #ffff;
@@ -148,7 +173,10 @@ body {
     background: #cddd3b;
 }
 [data-theme="yellow"] .head {
-    background: #737c1c;
+    background: #9fac30;
+}
+[data-theme="yellow"] .foot {
+    background: #9fac30;
 }
 [data-theme="yellow"] .book-info h3,
 [data-theme="yellow"] .book-info p {
@@ -156,4 +184,61 @@ body {
 }
 [data-theme="yellow"] .book-info {
     background: rgba(235, 233, 144, 0.9);
+}
+[data-theme="horny"] body {
+    background-image: none;
+    background-color: rgb(133, 61, 121);
+}
+
+[data-theme="horny"] .book {
+    background: #4e0748;
+}
+
+[data-theme="horny"] .book-info {
+    background: rgba(174, 132, 177, 0.9);
+}
+
+[data-theme="horny"] .book-info h3,
+[data-theme="horny"] .book-info p {
+    color: #fff;
+}
+[data-theme="horny"] .head {
+    background: #610b6d;
+}
+[data-theme="horny"] .foot {
+    background: #610b6d;
+}
+[data-theme="horny"] .logo {
+    color: #ffff;}
+[data-theme="light"] #reset-theme {
+    background-image: url(../images/resetlight.png);
+}
+[data-theme="light"] #toggle-theme {
+    background-image: url(../images/themelight.png);}
+    [data-theme="dark"] #reset-theme {
+    background-image: url(../images/resetdark.png);
+}
+[data-theme="dark"] #toggle-theme {
+    background-image: url(../images/themedark.png);}
+    [data-theme="yellow"] #reset-theme {
+    background-image: url(../images/resetyellow.png);
+}
+[data-theme="yellow"] #toggle-theme {
+    background-image: url(../images/themeyellow.png);}
+    [data-theme="horny"] #reset-theme {
+    background-image: url(../images/resethorny.png);
+}
+[data-theme="horny"] #toggle-theme {
+    background-image: url(../images/themehorny.png);}
+    [data-theme="light"] .logo {
+    background-image: url(../images/logolight.png);
+}
+[data-theme="dark"] .logo {
+    background-image: url(../images/logodark.png);
+}
+[data-theme="yellow"] .logo {
+    background-image: url(../images/logoyellow.png);
+}
+[data-theme="horny"] .logo {
+    background-image: url(../images/logohorny.png);
 }
