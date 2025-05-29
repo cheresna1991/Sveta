@@ -50,12 +50,29 @@ body {
 }
 
 .img {
-    max-width: 90%;
-    max-height: 90%;
+    width: 90%;
     object-fit: contain;
     transition: opacity 0.3s ease;
 }
+#etud{
+    width: 85%;
+}
+#etud2{
+    width: 85%;
+}
+#etud3{
+    width: 85%;
+}
+#etud4{
+    width: 85%;
+}
+#etud5{
+    width: 85%;
+}
 
+#etud6{
+    width: 80%;
+}
 .book-info {
     position: absolute;
     top: 0;
@@ -99,10 +116,10 @@ body {
             grid-template-columns: 1fr;
             gap: 10px;
             
-            text-align: center;
+            text-align: right;
 }
 .text{
-    color: #fff;
+    color: #d8d8d8;
 }
 .sfoot{
     display: grid;
@@ -167,16 +184,19 @@ body {
     color: #ffff;
 }
 [data-theme="yellow"] .book {
-    background: #818d13;
+    background: #dde2aa;
 }
 [data-theme="yellow"] body {
-    background: #cddd3b;
+    background: #cad37a;
 }
 [data-theme="yellow"] .head {
     background: #9fac30;
 }
 [data-theme="yellow"] .foot {
     background: #9fac30;
+}
+[data-theme="yellow"] .text {
+    color: #ebebea;
 }
 [data-theme="yellow"] .book-info h3,
 [data-theme="yellow"] .book-info p {
